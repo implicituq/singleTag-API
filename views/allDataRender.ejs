@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>Single-Tag API Link Filter</title>
+    </head>
+    <body>
+        <h1>The following list is in ascending order, press below for descending order</h1>
+        <form action="/descendingAll" method="GET">
+            <button >Descending</button>
+        </form>
+        <form action="/mainMenu" method="GET">
+            <button>Main Menu</button>
+        </form>
+        <% listItems.forEach(function(element){ %>
+            <p>Author:<%= element.author %> AuthorId:<%= element.authorId %> Popularity:<%= element.popularity %> Likes:<%= element.likes %> Reads:<%= element.reads %> Tags:<%= element.tags %></p>
+        <%  }); %>  
+    </body>
+</html>
